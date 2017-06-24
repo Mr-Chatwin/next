@@ -1,0 +1,40 @@
+{
+    "name": "heroku/heroku-buildpack-php",
+    "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+    "keywords": ["heroku", "foreman", "php", "hhvm", "apache", "apache2", "nginx"],
+    "homepage": "http://github.com/heroku/heroku-buildpack-php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Zuelke",
+            "email": "dz@heroku.com"
+        }
+    ],
+    "bin": [
+        "bin/heroku-hhvm-apache2",
+        "bin/heroku-hhvm-nginx",
+        "bin/heroku-php-apache2",
+        "bin/heroku-php-nginx"
+    ],
+
+#需要安装的PHP拓展 支持的拓展可以查看官方文档 https://devcenter.heroku.com/articles/php-support#extensions
+#若需要HHVM环境，删除所有拓展后添加"hhvm": "^3.5.1",
+  "require": {
+    "php": "^5.6.0",
+        "ext-bcmath": "*",
+        "ext-memcached": "*",
+        "ext-mongo": "*",
+        "ext-xsl": "*",
+        "ext-bcmath": "*",
+        "ext-calendar": "*",
+        "ext-exif": "*",
+        "ext-ftp": "*",
+        "ext-gd": "*",
+        "ext-mysql": "*",
+        "ext-sqlite3": "*",
+        "ext-pdo_sqlite": "*",
+        "ext-xmlrpc": "*",
+        "ext-xsl": "*"
+  }
+}
